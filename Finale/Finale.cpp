@@ -1,7 +1,7 @@
 ﻿#include"Car.h"
 #include <Windows.h>
 int main() {
-
+    setlocale(0, "");
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     vector<Car*> cars;
