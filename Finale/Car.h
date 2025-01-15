@@ -23,20 +23,17 @@ public:
     Car(const string& brand, int year, double price, const string& configuration, const string& manufacturer, const string& saleDate, const string& buyerName)
         : brand(brand), year(year), price(price), configuration(configuration), manufacturer(manufacturer), saleDate(saleDate), buyerName(buyerName) {}
 
-    virtual ~Car() {} // Віртуальний деструктор
+    virtual ~Car() {}
 
-    // Віртуальний метод для відображення інформації про автомобіль
     virtual void display() const {
         cout << "Марка: " << brand << ", Рік: " << year << ", Ціна: " << price << " $, Комплектація: " << configuration
             << ", Виробник: " << manufacturer << ", Дата продажу: " << saleDate << ", Покупець: " << buyerName << endl;
     }
 
-    // Віртуальний метод для запису в файл
     virtual void saveToFile(ofstream& file) const {
         file << brand << "," << year << "," << price << "," << configuration << "," << manufacturer << "," << saleDate << "," << buyerName;
     }
 
-    // Аксесори для отримання даних
     const string& getBrand() const { return brand; }
     int getYear() const { return year; }
     double getPrice() const { return price; }
